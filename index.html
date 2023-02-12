@@ -101,7 +101,7 @@
                 <button type="button" class="btn btn-moreInfo">Περισσότερα</button>
             </section>
         </article>
-        <article id="about">
+        <section id="about">
             <header>
                 <h2>Η ιστορία μας</h2>
             </header>
@@ -118,7 +118,43 @@
             <figure>
                 <img src="" alt="Two receptionist on the reception desk" role="presentation">
             </figure>
-        </article>
+        </section>
+        <section id="subscribe">
+            <section id="contact">
+                <h2>Δηλώστε Ενδιαφέρον</h2>
+                <p>
+                    Σας ενδιαφέρει κάποιο από τα σεμινάρια μας; 
+                    Συμπληρώστε τα στοιχεία στη διπλανή φόρμα και 
+                    θα επικοινωνήσουμε σύντομα μαζί σας! 
+                </p>
+                <address>
+                    <a href="mailto:hospitality-access@hotmail.com?subject=Ενδιαφέρομαι για σεμινάριο">hospitality-access@hotmail.com</a>
+                    Τηλ.:<em>6956698781</em>
+                </address>
+            </section>
+            <section id="subscribe-form">
+                <form method="POST" action="#">
+                    <label for="first-name">Όνομα</label>
+                    <input type="text" name="first-name" id="first-name" required/>
+                    <label for="last-name">Επίθετο</label>
+                    <input type="text" name="last-name" id="last-name" required />
+                    <label for="user-email">Email *</label>
+                    <input type="email" name="user-email" id="user-email" required/>
+                    <label for="user-telephone">Τηλέφωνο *</label>
+                    <input type="tel" name="user-telephone" id="user-telephone" required/>
+                    <select name="course">
+                        <option value="receptionist">Υπάλληλος Υποδοχής - Receptionist</option>
+                        <option value="concierge">Guest relations - Concierge - Διαχείρηση Παραπόνων</option>
+                        <option value="customerSupport">Πρότυπα email - Άμεσο εγχειρίδιο Εξυπηρέτησης Πελατών</option>
+                        <option value="resumeSending">Προώθηση Βιογραφικών σε Τουριστικά Καταλύματα - Αποστολή θέσεων εργασίας</option>
+                        <option value="interviewPrep">Προετοιμασία Συνέντευξης - Δημιουργία Ανταγωνιστικού Βιογραφικού</option>
+                    </select>
+                    <input type="checkbox" id="newsletterSubscription" name="newsletterSubscription">
+                    <label for="newsletterSubscription">Εγγραφή στο Newsletter μας!</label>
+                    <button type="submit" id="btn btn-submit">Αποστολή</button>
+                </form>
+            </section> 
+        </section>
     </main>
 </body>
 </html>
