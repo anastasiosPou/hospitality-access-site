@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online σεμινάρια τουρισμού. Η hospitality-access είναι 
+    μια διαδικτυακή πλατφόρμα γιαυτούς που ενδιαφέρονται να αρχίσουν καριέρα στον τουρισμό.
+    Πάρεχει μαθήματα σε διάφορες θέσης εργασίας στα τουριστικά."/>
     <title>Hospitality access</title>
     <link rel="stylesheet" href="resources/styles/normalize.css"/>
     <link rel="stylesheet" href="resources/styles/built/main.css"/>
@@ -142,7 +145,8 @@
                     <input type="email" name="user-email" id="user-email" required/>
                     <label for="user-telephone">Τηλέφωνο *</label>
                     <input type="tel" name="user-telephone" id="user-telephone" required/>
-                    <select name="course">
+                    <label for="courseSelection">Διαλέξτε Σεμινάριο για το οποίο ενδιαφέρεστε *</label>
+                    <select name="course" id="courseSelection">
                         <option value="receptionist">Υπάλληλος Υποδοχής - Receptionist</option>
                         <option value="concierge">Guest relations - Concierge - Διαχείρηση Παραπόνων</option>
                         <option value="customerSupport">Πρότυπα email - Άμεσο εγχειρίδιο Εξυπηρέτησης Πελατών</option>
@@ -151,7 +155,7 @@
                     </select>
                     <input type="checkbox" id="newsletterSubscription" name="newsletterSubscription">
                     <label for="newsletterSubscription">Εγγραφή στο Newsletter μας!</label>
-                    <button type="submit" id="btn btn-submit">Αποστολή</button>
+                    <button type="submit" class="btn btn-submit">Αποστολή</button>
                 </form>
             </section> 
         </section>
