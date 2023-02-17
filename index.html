@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Online σεμινάρια τουρισμού. Η hospitality-access είναι 
-    μια διαδικτυακή πλατφόρμα γιαυτούς που ενδιαφέρονται να αρχίσουν καριέρα στον τουρισμό.
-    Πάρεχει μαθήματα σε διάφορες θέσης εργασίας στα τουριστικά."/>
+    μια διαδικτυακή πλατφόρμα γι'αυτούς που ενδιαφέρονται να αρχίσουν καριέρα στον τουρισμό.
+    Πάρεχει μαθήματα σε διάφορες θέσεις εργασίας στα τουριστικά."/>
     <title>Hospitality access</title>
     <link rel="stylesheet" href="resources/styles/normalize.css"/>
     <link rel="stylesheet" href="resources/styles/built/main.css"/>
@@ -17,7 +17,7 @@
         <figure id="site-logo">
             <img src="" alt="The site's logo" />
         </figure>
-        <nav id="main-menu">
+        <nav id="main-menu" role="navigation">
             <ul>
                 <li>Αρχική</li>
                 <li>Η ιστορία μας</li>
@@ -138,13 +138,13 @@
             <section id="subscribe-form">
                 <form method="POST" action="#">
                     <label for="first-name">Όνομα</label>
-                    <input type="text" name="first-name" id="first-name" required/>
+                    <input type="text" name="first-name" id="first-name" required aria-required="true"/>
                     <label for="last-name">Επίθετο</label>
-                    <input type="text" name="last-name" id="last-name" required />
+                    <input type="text" name="last-name" id="last-name" required aria-required="true"/>
                     <label for="user-email">Email *</label>
-                    <input type="email" name="user-email" id="user-email" required/>
+                    <input type="email" name="user-email" id="user-email" required aria-required="true"/>
                     <label for="user-telephone">Τηλέφωνο *</label>
-                    <input type="tel" name="user-telephone" id="user-telephone" required/>
+                    <input type="tel" name="user-telephone" id="user-telephone" required aria-required="true"/>
                     <label for="courseSelection">Διαλέξτε Σεμινάριο για το οποίο ενδιαφέρεστε *</label>
                     <select name="course" id="courseSelection">
                         <option value="receptionist">Υπάλληλος Υποδοχής - Receptionist</option>
