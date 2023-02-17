@@ -6,4 +6,10 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
 /*# sourceMappingURL=main.css.map */
