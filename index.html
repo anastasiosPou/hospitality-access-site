@@ -12,19 +12,18 @@
     <link rel="stylesheet" href="resources/styles/built/main.css"/>
 </head>
 <body>
-    <header>
+    <header id="topHeader">
         <h1>Hospitality Access - Online Σεμινάρια Τουρισμού</h1>
         <figure id="site-logo">
             <img src="resources/images/companyLogo.png" alt="The site's logo" />
         </figure>
-        <nav id="main-menu" role="navigation">
-            <ul>
-                <li>Αρχική</li>
-                <li>Η ιστορία μας</li>
-                <li>Online σεμινάρια τουρισμού</li>
-                <li title="Αν διαλέξετε εδώ θα αρχίσει το κατέβασμα του ebook(4MB)">Δωρεάν E-book</li>
-                <li>Επικοινωνία</li>
-                <li>GDPR</li>
+        <nav role="navigation">
+            <ul id="main-menu">
+                <li><a href="#">Αρχική</a></li>
+                <li><a href="#">Η ιστορία μας</a></li>
+                <li><a href="#">Online σεμινάρια</a></li>
+                <li><a href="#" title="Αν διαλέξετε εδώ θα αρχίσει το κατέβασμα του ebook(4MB)">Δωρεάν E-book</a></li>
+                <li><a href="#">Επικοινωνία</a></li>
             </ul>
         </nav>
     </header>
@@ -151,10 +150,10 @@
                     <label for="courseSelection">Διαλέξτε Σεμινάριο για το οποίο ενδιαφέρεστε *</label>
                     <select name="course" id="courseSelection">
                         <option value="receptionist">Υπάλληλος Υποδοχής - Receptionist</option>
-                        <option value="concierge">Guest relations - Concierge - Διαχείρηση Παραπόνων</option>
-                        <option value="customerSupport">Πρότυπα email - Άμεσο εγχειρίδιο Εξυπηρέτησης Πελατών</option>
-                        <option value="resumeSending">Προώθηση Βιογραφικών - Αποστολή θέσεων εργασίας</option>
-                        <option value="interviewPrep">Προετοιμασία Συνέντευξης - Δημιουργία Ανταγωνιστικού Βιογραφικού</option>
+                        <option value="concierge">Guest relations - Concierge</option>
+                        <option value="customerSupport">Πρότυπα email</option>
+                        <option value="resumeSending">Προώθηση Βιογραφικών</option>
+                        <option value="interviewPrep">Προετοιμασία Συνέντευξης</option>
                     </select>
                     <input type="checkbox" id="newsletterSubscription" name="newsletterSubscription">
                     <label for="newsletterSubscription">Εγγραφή στο Newsletter μας!</label>

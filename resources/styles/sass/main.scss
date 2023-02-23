@@ -1,3 +1,11 @@
+@import "partials/mixins";
+@import "partials/placeholders";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,100;1,400&display=swap');
+
+//Variables
+$centerAligned: center;
+$headingFont: 'Noto Serif Display', serif;
+
 //Reseting box sizing for a coprehensive layout.
 html {
     box-sizing: border-box;
@@ -11,4 +19,48 @@ img {
     max-width: 100%;
     height: auto;
     aspect-ratio: auto;
+}
+
+/*
+ Remove bullet point and
+ the default left padding from 
+ unordered lists
+*/
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+//Header styles
+#topHeader {
+    @include flexContainer(center, stretch, wrap, column);
+    h1 {
+        font: {
+            family: $headingFont;
+            size: 1.5rem;
+        }
+        order: 1;
+        text-align: $centerAligned;
+    }
+
+    #main-menu {
+        @include flexContainer(initial, center, wrap, column);
+        li {
+            a:link {
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                text-decoration: none;
+                color: #000000;
+                border-bottom: 0.5px solid #000;
+            }
+            flex: 1 auto;
+            width: 250px;
+            text-align: center;
+            font: {
+                size: 1.4rem;
+            }
+            margin-top: 30px;
+        }
+    }
 }
