@@ -10,6 +10,7 @@
     <title>Hospitality access</title>
     <link rel="stylesheet" href="resources/styles/normalize.css"/>
     <link rel="stylesheet" href="resources/styles/built/main.css"/>
+    <script src="resources/app.js" defer></script>
 </head>
 <body>
     <header id="topHeader">
@@ -18,13 +19,16 @@
             <img src="resources/images/companyLogo.png" alt="The site's logo" />
         </figure>
         <nav role="navigation">
-            <ul id="main-menu">
-                <li><a href="#">Αρχική</a></li>
-                <li><a href="#">Η ιστορία μας</a></li>
-                <li><a href="#">Online σεμινάρια</a></li>
-                <li><a href="#" title="Αν διαλέξετε εδώ θα αρχίσει το κατέβασμα του ebook(4MB)">Δωρεάν E-book</a></li>
-                <li><a href="#">Επικοινωνία</a></li>
-            </ul>
+            <section id="hamburger-menu">
+                <img role="button" id="hamburger-menu-icon" src="resources/images/hamburger.png" alt="Menu icon when viewing the webpage on smaller screens"/>
+                <ul id="main-menu">
+                    <li><a href="#">Αρχική</a></li>
+                    <li><a href="#">Η ιστορία μας</a></li>
+                    <li><a href="#">Online σεμινάρια</a></li>
+                    <li><a href="#" title="Αν διαλέξετε εδώ θα αρχίσει το κατέβασμα του ebook(4MB)">Δωρεάν E-book</a></li>
+                    <li><a href="#">Επικοινωνία</a></li>
+                </ul>
+            </section>
         </nav>
     </header>
     <section id="hero">

@@ -1,7 +1,7 @@
 @import "partials/mixins";
 @import "partials/placeholders";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,100;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 //Variables
 $centerAligned: center;
 $headingFont: 'Noto Serif Display', serif;
@@ -33,7 +33,7 @@ ul {
 
 //Header styles
 #topHeader {
-    @include flexContainer(center, stretch, wrap, column);
+    @include flexContainer(center, stretch, wrap, row);
     h1 {
         font: {
             family: $headingFont;
@@ -41,26 +41,51 @@ ul {
         }
         order: 1;
         text-align: $centerAligned;
+        visibility: hidden;
     }
 
-    #main-menu {
-        @include flexContainer(initial, center, wrap, column);
-        li {
-            a:link {
-                display: inline-block;
-                height: 100%;
-                width: 100%;
+    #site-logo {
+        @include flexContainer(flex-start, flex-start, no-wrap, row);
+        flex: 2 150px;
+        margin: 10px;
+
+        img {      
+            max-width: 160px;
+        }
+    }
+
+    nav {
+        @include flexContainer(flex-end, flex-end, no-wrap, row);
+        flex: 1 150px;
+        margin-right: 10px;
+        #hamburger-menu-icon {
+            max-width: 45px;
+        }
+
+        #main-menu {
+            @include flexContainer(stretch, flex-end, wrap, column);
+            position: absolute;
+            top: 75px;
+            right: 0;
+            background-color: #000814;
+            visibility: hidden;
+            padding: 10px 20px;
+            height: 400px;
+            width: 100%;
+            z-index: 2;
+            li {
+                flex: 1 auto;
+            }
+
+            a:link, a:visited {
+                color: #fff;
+                font: {
+                    size: 1.5rem;
+                    family: 'Manrope', sans-serif;
+                }
                 text-decoration: none;
-                color: #000000;
-                border-bottom: 0.5px solid #000;
+                border-bottom: 2px solid #fff;
             }
-            flex: 1 auto;
-            width: 250px;
-            text-align: center;
-            font: {
-                size: 1.4rem;
-            }
-            margin-top: 30px;
         }
     }
 }

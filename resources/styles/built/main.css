@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -27,34 +28,61 @@ ul {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
 }
 #topHeader h1 {
   font-family: "Noto Serif Display", serif;
   font-size: 1.5rem;
   order: 1;
   text-align: center;
+  visibility: hidden;
 }
-#topHeader #main-menu {
+#topHeader #site-logo {
   display: flex;
-  justify-content: initial;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row no-wrap;
+  flex: 2 150px;
+  margin: 10px;
+}
+#topHeader #site-logo img {
+  max-width: 160px;
+}
+#topHeader nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: row no-wrap;
+  flex: 1 150px;
+  margin-right: 10px;
+}
+#topHeader nav #hamburger-menu-icon {
+  max-width: 45px;
+}
+#topHeader nav #main-menu {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-end;
   flex-flow: column wrap;
-}
-#topHeader #main-menu li {
-  flex: 1 auto;
-  width: 250px;
-  text-align: center;
-  font-size: 1.4rem;
-  margin-top: 30px;
-}
-#topHeader #main-menu li a:link {
-  display: inline-block;
-  height: 100%;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background-color: #000814;
+  visibility: hidden;
+  padding: 10px 20px;
+  height: 400px;
   width: 100%;
+  z-index: 2;
+}
+#topHeader nav #main-menu li {
+  flex: 1 auto;
+}
+#topHeader nav #main-menu a:link, #topHeader nav #main-menu a:visited {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Manrope", sans-serif;
   text-decoration: none;
-  color: #000000;
-  border-bottom: 0.5px solid #000;
+  border-bottom: 2px solid #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
