@@ -33,16 +33,7 @@ ul {
 
 //Header styles
 #topHeader {
-    @include flexContainer(center, stretch, wrap, row);
-    h1 {
-        font: {
-            family: $headingFont;
-            size: 1.5rem;
-        }
-        order: 1;
-        text-align: $centerAligned;
-        visibility: hidden;
-    }
+    @include flexContainer(space-between, stretch, wrap, row);
 
     #site-logo {
         @include flexContainer(flex-start, flex-start, no-wrap, row);
@@ -58,7 +49,10 @@ ul {
         @include flexContainer(flex-end, flex-end, no-wrap, row);
         flex: 1 150px;
         margin-right: 10px;
-        #hamburger-menu-icon {
+        #hamburger-menu {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
             max-width: 45px;
         }
 
@@ -73,19 +67,38 @@ ul {
             height: 400px;
             width: 100%;
             z-index: 2;
+
             li {
                 flex: 1 auto;
             }
 
-            a:link, a:visited {
-                color: #fff;
-                font: {
-                    size: 1.5rem;
-                    family: 'Manrope', sans-serif;
+            a {
+                &:link, &:visited {
+                    color: #fff;
+                    font: {
+                        size: 1.5rem;
+                        family: 'Manrope', sans-serif;
+                    }
+                    text-decoration: none;
+                    border-bottom: 2px solid #fff;
+                    transition: .5s color;
                 }
-                text-decoration: none;
-                border-bottom: 2px solid #fff;
+                &:hover {
+                    color:gold;
+                }
             }
+
+
         }
     }
+}
+
+h1 {
+    font: {
+        family: $headingFont;
+        size: 1.5rem;
+    }
+    order: 1;
+    text-align: $centerAligned;
+    visibility: hidden;
 }
