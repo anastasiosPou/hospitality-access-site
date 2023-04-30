@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 //Variables
 $centerAligned: center;
-$headingFont: 'Noto Serif Display', serif;
+$headingFont: 'Manrope', serif;
+$mobilePadding: 0 4vw;
 
 //Reseting box sizing for a coprehensive layout.
 html {
@@ -17,8 +18,20 @@ html {
 
 img {
     max-width: 100%;
+    display: block;
     height: auto;
-    aspect-ratio: auto;
+    object-fit: cover;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: {
+        family: $headingFont;
+    }
 }
 
 /*
@@ -31,15 +44,23 @@ ul {
     padding-left: 0;
 }
 
+/* Main container */
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14vh 0;
+}
+
 //Header styles
 #topHeader {
-    @include flexContainer(space-between, stretch, wrap, row);
-
+    @include flexContainer(space-between, stretch, nowrap, row);
+    height: 13vh;
     #site-logo {
-        @include flexContainer(flex-start, flex-start, no-wrap, row);
-        flex: 2 150px;
-        margin: 10px;
-
+        @include flexContainer(center, flex-end, nowrap, column);
+        flex: 2;
+        margin: 0;
+        padding-top: 12px;
+        padding-left: 5px;
         img {      
             max-width: 160px;
         }
@@ -93,12 +114,131 @@ ul {
     }
 }
 
-h1 {
-    font: {
-        family: $headingFont;
-        size: 1.5rem;
+//Hero styles
+
+#hero {
+    @include flexContainer(flex-start, center, nowrap, column);
+    padding: $mobilePadding;
+    
+    h1 {
+        font: {
+            size: 2.2rem;
+        }
+        padding-left: 4px;
+        border-left: 4px solid #000;
+        order: 0;
+        margin-top: 6vh;
+        margin-bottom: 12px;
     }
-    order: 1;
-    text-align: $centerAligned;
-    visibility: hidden;
+
+    h2 {
+        margin-top: 2vh;
+        order: 1;
+        font: {
+            weight: normal;
+            size: 1.2rem;
+        }
+    }
+
+    #allCoursesBtn {
+        order: 1;
+        margin-top: 4vh;
+        background-color: hsl(37, 54%, 44%);
+        color: #fff;
+    }
+
+    p {
+        order: 3;
+        font: {
+            family: Georgia, serif;
+            size: 1.1rem;
+        }
+        margin-top: 8vh;
+        letter-spacing: calc(1rem * 0.05);
+        line-height: calc(1rem * 1.4);
+    }
+
+    button {
+        order: 4;
+        align-self: flex-start;
+    }
+
+    #author-picture {
+        margin-top: 30vh;
+        order: 2;
+        img {
+            border-radius: 50%;
+        }
+        figcaption {
+            font: {
+                family: Verdana, serif;
+                weight: light;
+                size: 0.8rem;
+            }
+            text-align: center;
+            margin-top: 5px;
+        }
+    }
+
+}
+
+/* btn classes */
+
+.btn {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    background-color:darkkhaki;
+    cursor: pointer;
+    transition: .5s background-color;
+    &:hover {
+        background-color: gold;
+    }
+}
+
+/* Main */
+
+
+/* Courses */
+main {
+    #online-courses {
+        @include flexContainer(space-around, flex-start, nowrap, column);
+        padding: $mobilePadding;
+        header {
+            h2 {
+                font: {
+                    size: 2rem;
+                }
+                border-left: 4px solid #000;
+                padding-left: 5px;
+            }
+            font: {
+                family: $headingFont;
+            }
+        }
+
+        .course {
+            margin-top: 10vh;
+            @include flexContainer(initial, initial, nowrap, column);
+            gap: 20px;
+            
+            figure {
+                margin: 0;
+                height: 250px;
+                img {
+                    max-height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h3 {
+                order: -1;
+                font: {
+                    size: 1.5rem;
+                }
+            }
+        }
+    }
 }

@@ -10,8 +10,18 @@ html {
 
 img {
   max-width: 100%;
+  display: block;
   height: auto;
-  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manrope", serif;
 }
 
 /*
@@ -24,19 +34,29 @@ ul {
   padding-left: 0;
 }
 
+/* Main container */
+#main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14vh 0;
+}
+
 #topHeader {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  height: 13vh;
 }
 #topHeader #site-logo {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: row no-wrap;
-  flex: 2 150px;
-  margin: 10px;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: column nowrap;
+  flex: 2;
+  margin: 0;
+  padding-top: 12px;
+  padding-left: 5px;
 }
 #topHeader #site-logo img {
   max-width: 160px;
@@ -85,12 +105,111 @@ ul {
   color: gold;
 }
 
-h1 {
-  font-family: "Noto Serif Display", serif;
-  font-size: 1.5rem;
+#hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding: 0 4vw;
+}
+#hero h1 {
+  font-size: 2.2rem;
+  padding-left: 4px;
+  border-left: 4px solid #000;
+  order: 0;
+  margin-top: 6vh;
+  margin-bottom: 12px;
+}
+#hero h2 {
+  margin-top: 2vh;
   order: 1;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+#hero #allCoursesBtn {
+  order: 1;
+  margin-top: 4vh;
+  background-color: hsl(37deg, 54%, 44%);
+  color: #fff;
+}
+#hero p {
+  order: 3;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  margin-top: 8vh;
+  letter-spacing: 0.05rem;
+  line-height: 1.4rem;
+}
+#hero button {
+  order: 4;
+  align-self: flex-start;
+}
+#hero #author-picture {
+  margin-top: 30vh;
+  order: 2;
+}
+#hero #author-picture img {
+  border-radius: 50%;
+}
+#hero #author-picture figcaption {
+  font-family: Verdana, serif;
+  font-weight: light;
+  font-size: 0.8rem;
   text-align: center;
-  visibility: hidden;
+  margin-top: 5px;
+}
+
+/* btn classes */
+.btn {
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: darkkhaki;
+  cursor: pointer;
+  transition: 0.5s background-color;
+}
+.btn:hover {
+  background-color: gold;
+}
+
+/* Main */
+/* Courses */
+main #online-courses {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  padding: 0 4vw;
+}
+main #online-courses header {
+  font-family: "Manrope", serif;
+}
+main #online-courses header h2 {
+  font-size: 2rem;
+  border-left: 4px solid #000;
+  padding-left: 5px;
+}
+main #online-courses .course {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: initial;
+  align-items: initial;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+main #online-courses .course figure {
+  margin: 0;
+  height: 250px;
+}
+main #online-courses .course figure img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main #online-courses .course h3 {
+  order: -1;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
