@@ -157,24 +157,40 @@
                 </section>
                 <section id="subscribe-form">
                     <form method="POST" action="#">
-                        <label for="first-name">Όνομα</label>
-                        <input type="text" name="first-name" id="first-name" required aria-required="true"/>
-                        <label for="last-name">Επίθετο</label>
-                        <input type="text" name="last-name" id="last-name" required aria-required="true"/>
-                        <label for="user-email">Email *</label>
-                        <input type="email" name="user-email" id="user-email" required aria-required="true"/>
-                        <label for="user-telephone">Τηλέφωνο *</label>
-                        <input type="tel" name="user-telephone" id="user-telephone" required aria-required="true"/>
-                        <label for="courseSelection">Διαλέξτε Σεμινάριο για το οποίο ενδιαφέρεστε *</label>
-                        <select name="course" id="courseSelection">
-                            <option value="receptionist">Υπάλληλος Υποδοχής - Receptionist</option>
-                            <option value="concierge">Guest relations - Concierge</option>
-                            <option value="customerSupport">Πρότυπα email</option>
-                            <option value="resumeSending">Προώθηση Βιογραφικών</option>
-                            <option value="interviewPrep">Προετοιμασία Συνέντευξης</option>
-                        </select>
-                        <input type="checkbox" id="newsletterSubscription" name="newsletterSubscription">
-                        <label for="newsletterSubscription">Εγγραφή στο Newsletter μας!</label>
+                        <label for="first-name">
+                            Όνομα<br />
+                            <input type="text" name="first-name" id="first-name" required aria-required="true"/>
+                        </label>
+                        
+                        <label for="last-name">
+                            Επίθετο<br />
+                            <input type="text" name="last-name" id="last-name" required aria-required="true"/>
+                        </label>
+                        <label for="user-email">
+                            Email *<br />
+                            <input type="email" name="user-email" id="user-email" required aria-required="true"/>
+                        </label>
+                        
+                        <label for="user-telephone">
+                            Τηλέφωνο *<br />
+                            <input type="tel" name="user-telephone" id="user-telephone" required aria-required="true"/>
+                        </label>
+                        
+                        <label for="courseSelection">
+                            Διαλέξτε Σεμινάριο για το οποίο ενδιαφέρεστε *<br />
+                            <select name="course" id="courseSelection">
+                                <option value="receptionist">Υπάλληλος Υποδοχής - Receptionist</option>
+                                <option value="concierge">Guest relations - Concierge</option>
+                                <option value="customerSupport">Πρότυπα email</option>
+                                <option value="resumeSending">Προώθηση Βιογραφικών</option>
+                                <option value="interviewPrep">Προετοιμασία Συνέντευξης</option>
+                            </select>
+                        </label>
+                        
+                        
+                        <label for="newsletterSubscription">
+                            <input type="checkbox" id="newsletterSubscription" name="newsletterSubscription">Εγγραφή στο Newsletter μας!
+                        </label>
                         <button type="submit" class="btn btn-submit">Αποστολή</button>
                     </form>
                 </section> 
