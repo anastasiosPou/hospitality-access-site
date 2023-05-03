@@ -8,9 +8,11 @@
     μια διαδικτυακή πλατφόρμα γι'αυτούς που ενδιαφέρονται να αρχίσουν καριέρα στον τουρισμό.
     Πάρεχει μαθήματα σε διάφορες θέσεις εργασίας στα τουριστικά."/>
     <title>Hospitality access</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="resources/styles/normalize.css"/>
     <link rel="stylesheet" href="resources/styles/built/main.css"/>
     <script src="resources/app.js" defer></script>
+    <script src="https://kit.fontawesome.com/5b6d93e3b4.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <div id="main-container">
@@ -24,16 +26,16 @@
                         <img role="button" id="hamburger-menu-icon" src="resources/images/hamburger.png" alt="Hamburger menu icon"/>
                     </button>
                     <ul id="main-menu">
-                        <li><a href="#">Αρχική</a></li>
-                        <li><a href="#">Η ιστορία μας</a></li>
-                        <li><a href="#">Online σεμινάρια</a></li>
+                        <li><a href="#home">Αρχική</a></li>
+                        <li><a href="#about">Η ιστορία μας</a></li>
+                        <li><a href="#courses">Online σεμινάρια</a></li>
                         <li><a href="#" title="Αν διαλέξετε εδώ θα αρχίσει το κατέβασμα του ebook(4MB)">Δωρεάν E-book</a></li>
-                        <li><a href="#">Επικοινωνία</a></li>
+                        <li><a href="#contact">Επικοινωνία</a></li>
                     </ul>
                 </section>
             </nav>
         </header>
-        <section id="hero">
+        <section id="hero" class="animate__animated animate__fadeInUp animate__delay-1s">
             <h1>Hospitality Access - Online Σεμινάρια Τουρισμού</h1>
             <h2>Ξεχωρίστε στη θέση της Yποδοχής - Reception ή Concierge</h2>
             <button class="btn" id="allCoursesBtn">Δείτε όλα τα σεμινάρια</button>
@@ -46,7 +48,7 @@
                 θεωρητικό και πρακτικό επίπεδο.
             </p>
             <button type="button" class="btn btn-moreInfo">Περισσότερα</button>
-            <figure role="figure" id="author-picture">
+            <figure role="figure" id="author-picture" class="animate__animated animate__fadeInUp">
                 <img src="resources/images/aristeaLappa.jpg" alt="A portrait of the author of the provided courses on tourism"/>
                 <figcaption>Αριστέα Λάππα - Διευθύντρια Σπουδών</figcaption>
             </figure>
@@ -198,11 +200,16 @@
         </main>
         <footer>
             <section id="socialMediaIcons">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">Facebook</a>
-                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             </section>
             <p>&copy; 2023 by Hospitality Access. All Rights Reserved.</p>
+            <section id="necessary">
+                <figure>
+                    <img src="resources/images/IMG_0237.JPG" alt="espa" />
+                </figure>
+            </section>
         </footer>
     </div>
 </body>

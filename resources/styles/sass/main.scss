@@ -205,8 +205,11 @@ ul {
 
 /* Courses */
 main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8rem 0;
     #online-courses {
-        @include flexContainer(space-around, flex-start, nowrap, column);
+        @include flexContainer(initial, flex-start, nowrap, column);
         padding: $mobilePadding;
         header {
             h2 {
@@ -222,9 +225,12 @@ main {
         }
 
         .course {
+            border-radius: 1rem;
             margin-top: 10vh;
+            box-shadow: 1px -1px 4px rgba(100, 100, 100, 0.6), -1px 1px 4px rgba(100, 100, 100, 0.6);
             @include flexContainer(initial, initial, nowrap, column);
             gap: 20px;
+            padding: 0.8rem;
             
             figure {
                 margin: 0;
@@ -233,6 +239,7 @@ main {
                     max-height: 100%;
                     width: 100%;
                     object-fit: cover;
+                    border-radius: 1rem;
                 }
             }
 
@@ -306,4 +313,33 @@ main {
             }
         }
     }
+}
+
+/*
+Footer
+*/
+
+footer {
+    @include flexContainer(initial, initial, nowrap, column);
+    #socialMediaIcons {
+        @include flexContainer(space-around, initial, nowrap, row);
+        .fa-brands {
+            font: {
+                size: 4rem;
+            }
+        }
+
+        .fa-facebook {
+            color: #1877f2;
+        }
+
+        .fa-instagram {
+            color: #fc3442;
+        }
+
+        .fa-twitter {
+            color: #1d9bf0;
+        }
+    }
+    
 }
