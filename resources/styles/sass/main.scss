@@ -10,6 +10,9 @@ $mobilePadding: 0 4vw;
 //Reseting box sizing for a coprehensive layout.
 html {
     box-sizing: border-box;
+    font: {
+        family: Georgia, Rooney, serif;
+    }
 }
 
 *, *:before, *:after {
@@ -240,5 +243,31 @@ main {
                 }
             }
         }
+    }
+    #about {
+        @include flexContainer(initial, center, nowrap, column);
+        padding: $mobilePadding;
+        row-gap: 1rem;
+
+        & header {
+            align-self: stretch;
+            border-left: 4px solid #000;
+            font: {
+                size: 1.5rem;
+            }
+        }
+
+        & figure {
+            align-self: stretch;
+            margin: 0;
+        }
+
+        p {
+            line-height: 1.375;
+            font: {
+                size: 1.1rem;
+            }
+        }
+
     }
 }
